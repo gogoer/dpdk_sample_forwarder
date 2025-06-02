@@ -3,15 +3,17 @@ Sample dpdk forwarder project
 
 # Requirements
 dpdk-dev library should be installed
+
 hugepages should be allocated, example:
-sudo dpdk-hugepages.py -p 2M --setup 4G
-sudo chmod 777 /dev/hugepages/
+
+`sudo dpdk-hugepages.py -p 2M --setup 4G
+sudo chmod 777 /dev/hugepages/`
 
 # How to build
-cd dpdk_sample_forwarder
+`cd dpdk_sample_forwarder
 cmake -B build .
 cd ./build
-make
+make`
 
 # Command line args
 --blocked-ips - list of src ip's to drop from forwarding
