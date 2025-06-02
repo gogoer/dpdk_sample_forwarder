@@ -20,6 +20,7 @@ make
 
 ## Command line args
 --blocked-ips - list of src ip's to drop from forwarding
+
 --reset-mac - reset src macs to 0
 Example:
 ```
@@ -28,6 +29,7 @@ dpdk_simple_forwarder --blocked-ips=192.168.0.1,192.168.10.5,192.168.0.158 --res
 
 ## Testing with pcap files
 Application can be tested without harware ethernet interfaces.
+
 Using with pcap files (sample pcap files can be found in pcaps dir):
 ```
 dpdk_simple_forwarder --vdev='net_pcap0,rx_pcap=input1.pcap' --vdev='net_pcap1,tx_pcap=output1.pcap'

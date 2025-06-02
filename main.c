@@ -166,7 +166,10 @@ int main(int argc, char **argv)
         rte_exit(EXIT_FAILURE, "Cannot create mbuf pool\n");
     }
 
-    packet_ring = rte_ring_create("packet_ring", RING_SIZE, rte_socket_id(), RING_F_SC_DEQ);
+    packet_ring = rte_ring_create("packet_ring",
+                                  RING_SIZE,
+                                  rte_socket_id(),
+                                  RING_F_SP_ENQ | RING_F_SC_DEQ);
     if (packet_ring == NULL) {
         rte_exit(EXIT_FAILURE, "Cannot create ring buffer\n");
     }
