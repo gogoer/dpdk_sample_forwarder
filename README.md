@@ -5,10 +5,11 @@ Sample dpdk forwarder project
 dpdk-dev library should be installed
 
 hugepages should be allocated, example:
+```
+sudo dpdk-hugepages.py -p 2M --setup 4G
 
-```sudo dpdk-hugepages.py -p 2M --setup 4G
-
-sudo chmod 777 /dev/hugepages/```
+sudo chmod 777 /dev/hugepages/
+```
 
 # How to build
 `cd dpdk_sample_forwarder
